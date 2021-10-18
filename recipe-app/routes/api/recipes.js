@@ -27,4 +27,13 @@ router.post('/', (req, res) => {
         .then(recipe => res.json(recipe))
 });
 
+// @route DELETE api/recipes/:id
+// @desc Delete a recipes
+// @access PUBLIC
+router.delete('/:id', (req, res) => {
+    Recipe.findById(req.params.id)
+        .then(recipe => recipe.remove().then(() => res.json({ success: true})))
+        .catch(err => res.status(404).json({ success:false }));
+});
+
 module.exports = router;
