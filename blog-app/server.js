@@ -15,8 +15,8 @@ mongoose.connect(db)
 
 
 // Use routes
-const recipes = require('./routes/api/recipes');
-app.use('/api/recipes', recipes);
+const blogs = require('./routes/api/blogs');
+app.use('/api/blogs', blogs);
 
 const port = process.env.PORT || 5000;
 
