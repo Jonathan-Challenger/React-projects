@@ -1,18 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Create recipe schema
+// Create blog schema
 
-const RecipeSchema = new Schema({
+const BlogSchema = new Schema({
     title: {
         type: String,
         required: true
     },
-    ingredients: {
-        type: String,
-        required: true
-    },
-    steps: {
+    content: {
         type: String,
         required: true
     },
@@ -22,4 +18,4 @@ const RecipeSchema = new Schema({
     }
 });
 
-module.exports = Recipe = mongoose.model('recipe', RecipeSchema);
+module.exports = Blog = mongoose.model('blog', BlogSchema);
