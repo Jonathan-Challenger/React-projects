@@ -1,9 +1,11 @@
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
+import AppHeader from './components/AppHeader';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <AppHeader />
     </div>
   );
 }
