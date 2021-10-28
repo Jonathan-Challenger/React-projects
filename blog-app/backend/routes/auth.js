@@ -3,8 +3,13 @@ const User = require('../models/User');
 const config = require('config');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const auth = require('../middleware/auth');
 
-// LOGIN
+
+// @route POST api/auth/login
+// @desc Login user
+// @access PUBLIC
+
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
@@ -45,7 +50,11 @@ router.post('/login', async (req, res) => {
     }
 })
 
-// REGISTER
+
+// @route POST api/users
+// @desc Register new user
+// @access PUBLIC
+
 router.post('/register', async (req, res) => {
     const { username, email, password } = req.body;
 
@@ -97,5 +106,14 @@ router.post('/register', async (req, res) => {
         res.status(400).json({msg: err.message})
     }
 });
+
+// @route GET api/auth/user
+// @desc Get user data
+// @access PRIVATE
+
+router.get('/user', auth, (req, res) => {
+    User.findById(req.user.id).select('-password')
+        .then(user => res.json(user));
+})
 
 module.exports = router;
