@@ -1,12 +1,13 @@
 import { FaSearch } from "react-icons/fa";
 import "./navbar.css";
+import logo from "../../img/logo.png";
 
 const Navbar = () => {
   return (
     <nav className='navbar bg-dark'>
-      <h1>
-        <a href='/'>FootballStats</a>
-      </h1>
+      <a href='/'>
+        <img src={logo} alt='Logo' />
+      </a>
       <ul>
         <li>
           <a href='/'>Standings</a>
