@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #436c00;
-  --dark-color: #262626;
-  --light-color: #b1ca80;
+  --primary-color: #3d195b;
+  --dark-color: #414141;
+  --light-color: #6a3c8f;
   --light-gray: #999999;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -257,10 +257,16 @@ ul {
   padding: 0.45rem;
   margin: 0 1rem;
   font-size: 1.5rem;
+  transition: color 200ms ease-in;
 }
 
 .navbar a:hover {
   color: var(--primary-color);
+}
+
+.navbar img {
+  height: 70px;
+  margin-top: 5px;
 }
 
 .navbar .welcome span {
