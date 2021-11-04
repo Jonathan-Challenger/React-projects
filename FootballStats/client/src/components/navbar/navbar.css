@@ -1,0 +1,16 @@
+#search-cont {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+}
+
+#search-icon {
+  width: 10%;
+  height: 40px;
+  cursor: pointer;
+  transition: color 200ms ease-in;
+}
+
+#search-icon:hover {
+  color: #b1ca80;
+}
