@@ -12,5 +12,21 @@
 }
 
 #search-icon:hover {
-  color: #6a3c8f;
+  color: #ffa45e;
+}
+
+.logo-cont {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  transition: color 200ms ease-in;
+}
+
+.logo-cont:hover {
+  color: #ffa45e;
+}
+
+#football {
+  height: 40px;
+  width: 40px;
 }
