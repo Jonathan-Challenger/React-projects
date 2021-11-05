@@ -1,12 +1,15 @@
 import { FaSearch } from "react-icons/fa";
+import { BiFootball } from "react-icons/bi";
 import "./navbar.css";
-import logo from "../../img/logo.png";
 
 const Navbar = () => {
   return (
     <nav className='navbar bg-dark'>
-      <a href='/'>
-        <img src={logo} alt='Logo' />
+      <a href='/' id='logo'>
+        <div className='logo-cont'>
+          <BiFootball id='football' />
+          PLStats
+        </div>
       </a>
       <ul>
         <li>
