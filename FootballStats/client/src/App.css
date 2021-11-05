@@ -1,10 +1,12 @@
 :root {
-  --primary-color: #3d195b;
-  --dark-color: #414141;
-  --light-color: #6a3c8f;
-  --light-gray: #999999;
+  --primary-color: #5a1297;
+  --dark-color: #4f0c44;
+  --light-color: #eddbf4;
+  --light-gray: #ededed;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  --accent-color: #e52d8a;
+  --yellow-color: #ffa45e;
 }
 
 * {
@@ -17,7 +19,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: var(--light-gray);
   color: var(--dark-color);
   overflow: hidden;
 }
@@ -261,7 +263,7 @@ ul {
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: var(--yellow-color);
 }
 
 .navbar img {
