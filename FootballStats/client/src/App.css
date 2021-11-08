@@ -21,7 +21,8 @@ body {
   line-height: 1.6;
   background-color: var(--light-gray);
   color: var(--dark-color);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 a {
@@ -31,6 +32,16 @@ a {
 
 ul {
   list-style: none;
+}
+
+.heading1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.heading2 {
+  text-align: center;
+  font-size: 40px;
 }
 
 /* Utilities */
