@@ -1,12 +1,18 @@
 import "./App.css";
 import axios from "axios";
 import Navbar from "./components/navbar/Navbar";
+import { useEffect, useState } from "react";
+import TeamItem from "./components/teamItem/TeamItem";
 
 function App() {
-  const homeData = async e => {
-    e.preventDefault();
+  const [teams, setTeams] = useState([]);
 
-    const data = await axios.get("https://v3.football.api-sports.io/teams", {
+  useEffect(() => {
+    homeData();
+  }, []);
+
+  const homeData = async () => {
+    const res = await axios.get("https://v3.football.api-sports.io/teams", {
       headers: {
         "x-apisports-key": "4b7394b710f3b701ba1b6b057b9495fd",
       },
@@ -15,10 +21,13 @@ function App() {
         league: "39",
       },
     });
-    console.log(data);
+
+    const teams = res.data.response;
+
+    setTeams(teams);
   };
 
-  const standingData = async e => {
+  /* const standingData = async e => {
     e.preventDefault();
 
     const data = await axios.get(
@@ -52,16 +61,19 @@ function App() {
       }
     );
     console.log(data);
-  };
+  }; */
 
   return (
     <>
       <Navbar />
       <section className='container'>
-        <h1>Football Stats App</h1>
-        <button onClick={e => homeData(e)}>Test home data</button>
-        <button onClick={e => standingData(e)}>Test standings data</button>
-        <button onClick={e => scorerData(e)}>Test scorers data</button>
+        <h1 className='heading1'>Premier League Statistics</h1>
+        <div className='container'>
+          <h2 className='heading2'>Teams</h2>
+          {teams.map(({ team }) => (
+            <TeamItem team={team} key={team.id} />
+          ))}
+        </div>
       </section>
     </>
   );
