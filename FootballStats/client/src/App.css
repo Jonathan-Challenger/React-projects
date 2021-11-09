@@ -4,7 +4,7 @@
   --light-color: #eddbf4;
   --light-gray: #ededed;
   --danger-color: #dc3545;
-  --success-color: #28a745;
+  --success-color: #697a6d;
   --accent-color: #e52d8a;
   --yellow-color: #ffa45e;
 }
@@ -32,16 +32,6 @@ a {
 
 ul {
   list-style: none;
-}
-
-.heading1 {
-  text-align: center;
-  font-size: 50px;
-}
-
-.heading2 {
-  text-align: center;
-  font-size: 40px;
 }
 
 /* Utilities */
@@ -284,4 +274,23 @@ ul {
 
 .navbar .welcome span {
   margin-right: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 5rem;
+  }
+
+  /* Text Styles */
+  .x-large {
+    font-size: 3rem;
+  }
+
+  .large {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
 }
