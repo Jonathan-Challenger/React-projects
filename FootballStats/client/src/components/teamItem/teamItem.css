@@ -1,5 +1,22 @@
 .team-cont {
-  max-width: 300px;
+  width: 400px;
   margin: auto;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #5a1297;
+  border-radius: 10px;
+  background-color: #eddbf4;
+}
+
+.team-cont:hover {
+  cursor: pointer;
+}
+
+.team-cont > img {
+  margin-top: 1rem;
+  width: 200px;
+  height: 200px;
 }
