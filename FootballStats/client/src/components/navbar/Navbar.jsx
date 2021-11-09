@@ -1,8 +1,12 @@
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaBars } from "react-icons/fa";
 import { BiFootball } from "react-icons/bi";
 import "./navbar.css";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isLinks, setLinks] = useState(false);
+  const [isSearch, setSearch] = useState(false);
+
   return (
     <nav className='navbar bg-dark'>
       <a href='/' id='logo'>
@@ -11,16 +15,34 @@ const Navbar = () => {
           PLStats
         </div>
       </a>
-      <ul>
-        <li>
-          <a href='/'>Standings</a>
-        </li>
-        <li>
-          <a href='/'>Top Scorers</a>
-        </li>
-      </ul>
-      <div id='search-cont'>
-        <input type='text' placeholder='Search teams or players' />
+      <div className='icon-cont'>
+        <FaSearch
+          className='icons'
+          onClick={() => {
+            setSearch(!isSearch);
+            setLinks(false);
+          }}
+        />
+        <FaBars
+          className='icons'
+          onClick={() => {
+            setLinks(!isLinks);
+            setSearch(false);
+          }}
+        />
+      </div>
+      <div className={`links-cont ${isLinks ? "active" : ""}`}>
+        <ul>
+          <li>
+            <a href='/'>Standings</a>
+          </li>
+          <li>
+            <a href='/'>Top Scorers</a>
+          </li>
+        </ul>
+      </div>
+      <div className={`search-cont ${isSearch ? "active" : ""}`}>
+        <input type='text' placeholder='Search PLStats' />
         <FaSearch id='search-icon' />
       </div>
     </nav>
