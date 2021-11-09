@@ -1,11 +1,11 @@
-#search-cont {
+.search-cont {
   display: flex;
   flex-direction: row;
   width: 20%;
 }
 
 #search-icon {
-  width: 10%;
+  width: 40px;
   height: 40px;
   cursor: pointer;
   transition: color 200ms ease-in;
@@ -29,4 +29,72 @@
 #football {
   height: 40px;
   width: 40px;
+}
+
+.icons {
+  height: 30px;
+  width: 30px;
+  margin: 0 0.2rem;
+}
+
+.icons:hover {
+  cursor: pointer;
+}
+
+.icon-cont {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  #search-icon {
+    display: none;
+  }
+
+  .search-cont {
+    width: 25%;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0;
+  }
+
+  #logo {
+    margin: 0;
+  }
+
+  .icon-cont {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .links-cont,
+  .search-cont {
+    display: none;
+  }
+
+  .navbar input[type="text"] {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    background-color: #4f0c44;
+    text-align: center;
+    border-bottom: 1px solid #5a1297;
+    padding-bottom: 0.3rem;
+  }
+
+  .active {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+  }
 }
