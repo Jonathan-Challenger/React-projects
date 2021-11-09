@@ -6,7 +6,7 @@ const TeamItem = ({ team }) => {
     <>
       <div className='team-cont'>
         <img src={team.logo} alt='Team Logo' />
-        <p>{team.name}</p>
+        <p className='lead text-center text-dark'>{team.name}</p>
       </div>
     </>
   );
