@@ -1,5 +1,6 @@
 .team-cont {
   width: 400px;
+  height: 400px;
   margin: auto;
   overflow: hidden;
   display: flex;
@@ -17,6 +18,13 @@
 
 .team-cont > img {
   margin-top: 1rem;
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
+}
+
+@media (max-width: 600px) {
+  .team-cont {
+    width: 250px;
+    height: 250px;
+  }
 }
