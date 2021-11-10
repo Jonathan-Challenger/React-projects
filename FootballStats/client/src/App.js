@@ -42,9 +42,9 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <section className='container'>
-        <h1 className='text-center x-large'>Premier League Statistics</h1>
-        <div className='container'>
+      <section className='page'>
+        <h1 className='text-center x-large py-5'>Premier League Statistics</h1>
+        <div className='container-inner'>
           <TeamsCont />
         </div>
       </section>
