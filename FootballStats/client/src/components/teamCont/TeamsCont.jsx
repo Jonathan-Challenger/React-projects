@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import TeamItem from "../teamItem/TeamItem";
 import axios from "axios";
 import "./teamscont.css";
+import Spinner from "../spinner/Spinner";
 
 const TeamCont = () => {
   const [teams, setTeams] = useState([]);
@@ -22,18 +23,23 @@ const TeamCont = () => {
     });
 
     const teams = res.data.response;
-
     setTeams(teams);
   };
 
   return (
     <>
-      <h2 className='text-center large'>Teams</h2>
-      <div className='teams-cont'>
-        {teams.map(({ team }) => (
-          <TeamItem team={team} key={team.id} />
-        ))}
-      </div>
+      {teams.length === 0 ? (
+        <Spinner />
+      ) : (
+        <>
+          <h2 className='text-center large'>Teams</h2>
+          <div className='teams-cont'>
+            {teams.map(({ team }) => (
+              <TeamItem team={team} key={team.id} />
+            ))}
+          </div>{" "}
+        </>
+      )}
     </>
   );
 };
