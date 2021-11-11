@@ -24,7 +24,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--dark-color);
-  background-color: var(--light-gray);
+  background-color: white;
   overflow-y: auto;
   overflow-x: hidden;
   min-height: 100%;
@@ -43,9 +43,10 @@ ul {
 
 .page {
   background: url("./img/background.png");
-  background-size: contain;
-  background-position: center;
+  background-size: auto;
+  background-repeat: repeat-y;
   position: relative;
+  min-height: 100vh;
 }
 
 .container-inner {
