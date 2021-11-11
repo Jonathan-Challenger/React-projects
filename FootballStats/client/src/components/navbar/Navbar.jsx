@@ -2,6 +2,7 @@ import { FaSearch, FaBars } from "react-icons/fa";
 import { BiFootball } from "react-icons/bi";
 import "./navbar.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isLinks, setLinks] = useState(false);
@@ -9,12 +10,12 @@ const Navbar = () => {
 
   return (
     <nav className='navbar bg-dark'>
-      <a href='/' id='logo'>
+      <Link to='/' id='logo'>
         <div className='logo-cont'>
           <BiFootball id='football' />
           PLStats
         </div>
-      </a>
+      </Link>
       <div className='icon-cont'>
         <FaSearch
           className='icons'
@@ -34,10 +35,10 @@ const Navbar = () => {
       <div className={`links-cont ${isLinks ? "active" : ""}`}>
         <ul>
           <li>
-            <a href='/'>Standings</a>
+            <Link to='/standings'>Standings</Link>
           </li>
           <li>
-            <a href='/'>Top Scorers</a>
+            <Link to='/top-scorers'>Top Scorers</Link>
           </li>
         </ul>
       </div>
