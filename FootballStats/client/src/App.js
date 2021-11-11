@@ -1,6 +1,9 @@
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import TeamsCont from "./components/teamCont/TeamsCont";
+import StandingCont from "./components/standings/StandingCont";
+import ScorersCont from "./components/scorers/ScorersCont";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   /* const standingData = async e => {
@@ -40,15 +43,23 @@ const App = () => {
   }; */
 
   return (
-    <>
-      <Navbar />
-      <section className='page'>
-        <h1 className='text-center x-large py-5'>Premier League Statistics</h1>
-        <div className='container-inner'>
-          <TeamsCont />
-        </div>
-      </section>
-    </>
+    <Router>
+      <>
+        <Navbar />
+        <section className='page'>
+          <h1 className='text-center x-large py-5'>
+            Premier League Statistics
+          </h1>
+          <div className='container-inner'>
+            <Routes>
+              <Route path='/' element={<TeamsCont />} />
+              <Route path='/standings' element={<StandingCont />} />
+              <Route path='/top-scorers' element={<ScorersCont />} />
+            </Routes>
+          </div>
+        </section>
+      </>
+    </Router>
   );
 };
 
