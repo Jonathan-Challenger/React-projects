@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import "./teamItem.css";
 
-const TeamItem = ({ team }) => {
+const TeamItem = ({ team: { name, logo } }) => {
   return (
     <>
       <div className='team-cont'>
-        <img src={team.logo} alt='Team Logo' />
-        <p className='lead text-center text-dark'>{team.name}</p>
+        <img src={logo} alt='Team Logo' />
+        <p className='lead text-center text-dark'>{name}</p>
       </div>
     </>
   );
