@@ -46,7 +46,6 @@ const App = () => {
     <Router>
       <>
         <Navbar />
-        <h1 className='text-center x-large py-5'>Premier League Statistics</h1>
         <div className='container-inner'>
           <Routes>
             <Route path='/' element={<TeamsCont />} />
