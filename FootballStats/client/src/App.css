@@ -41,14 +41,6 @@ ul {
 
 /* Utilities */
 
-.page {
-  background: url("./img/background.png");
-  background-size: auto;
-  background-repeat: repeat-y;
-  position: relative;
-  min-height: 100vh;
-}
-
 .container-inner {
   max-width: 1100px;
   margin: auto;
