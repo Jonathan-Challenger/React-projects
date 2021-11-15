@@ -46,18 +46,14 @@ const App = () => {
     <Router>
       <>
         <Navbar />
-        <section className='page'>
-          <h1 className='text-center x-large py-5'>
-            Premier League Statistics
-          </h1>
-          <div className='container-inner'>
-            <Routes>
-              <Route path='/' element={<TeamsCont />} />
-              <Route path='/standings' element={<StandingCont />} />
-              <Route path='/top-scorers' element={<ScorersCont />} />
-            </Routes>
-          </div>
-        </section>
+        <h1 className='text-center x-large py-5'>Premier League Statistics</h1>
+        <div className='container-inner'>
+          <Routes>
+            <Route path='/' element={<TeamsCont />} />
+            <Route path='/standings' element={<StandingCont />} />
+            <Route path='/top-scorers' element={<ScorersCont />} />
+          </Routes>
+        </div>
       </>
     </Router>
   );
