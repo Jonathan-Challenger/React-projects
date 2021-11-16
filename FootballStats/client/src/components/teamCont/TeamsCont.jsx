@@ -26,15 +26,12 @@ const TeamCont = () => {
   };
 
   return (
-    <>
+    <div className='container-inner'>
       {teams.length === 0 ? (
         <Spinner />
       ) : (
         <>
-          <h1 className='text-center x-large py-5'>
-            Premier League Statistics
-          </h1>
-          <h2 className='text-center large'>Teams</h2>
+          <h2 className='text-center large text-primary'>Teams</h2>
           <div className='items-cont'>
             {teams.map(({ team }) => (
               <TeamItem team={team} key={team.id} />
@@ -42,7 +39,7 @@ const TeamCont = () => {
           </div>{" "}
         </>
       )}
-    </>
+    </div>
   );
 };
 
