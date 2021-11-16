@@ -8,22 +8,24 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  transition: color 200ms ease-in;
+  transition: color 100ms ease-in-out;
 }
 
 #search-icon:hover {
-  color: #ffa45e;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .logo-cont {
   display: flex;
   flex-direction: row;
   cursor: pointer;
-  transition: color 200ms ease-in;
+  transition: color 100ms ease-in-out;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 .logo-cont:hover {
-  color: #ffa45e;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #football {
@@ -85,10 +87,10 @@
     position: absolute;
     z-index: 1;
     right: 0;
-    background-color: #4f0c44;
+    background-color: #5a1297;
     padding: 0.5rem;
     border-radius: 0 5px 5px 0;
-    border-left: 1px solid #5a1297;
+    border-left: 1px solid white;
   }
 
   .navbar ul {
@@ -97,9 +99,9 @@
   }
 
   .navbar ul li {
-    background-color: #4f0c44;
+    background-color: #5a1297;
     text-align: center;
-    border-bottom: 1px solid #5a1297;
+    border-bottom: 1px solid white;
     padding-bottom: 0.3rem;
   }
 
