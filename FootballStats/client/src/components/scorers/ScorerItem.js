@@ -29,7 +29,7 @@ const ScorerItem = ({ player, statistics }) => {
 
 ScorerItem.propTypes = {
   player: PropTypes.object.isRequired,
-  statistics: PropTypes.object.isRequired,
+  statistics: PropTypes.array.isRequired,
 };
 
 export default ScorerItem;
