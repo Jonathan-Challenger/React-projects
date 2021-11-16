@@ -24,7 +24,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--dark-color);
-  background-color: var(--light-color);
+  background-color: white;
   overflow-y: auto;
   overflow-x: hidden;
   min-height: 100%;
@@ -70,6 +70,10 @@ ul {
 
 .text-center {
   text-align: center;
+}
+
+.text-black {
+  color: black;
 }
 
 .text-primary {
@@ -273,7 +277,7 @@ ul {
 }
 
 .navbar a:hover {
-  color: var(--yellow-color);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar img {
@@ -300,13 +304,17 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #5a1297;
+  border: 1px solid var(--primary-color);
   border-radius: 10px;
   background: white;
+  transition: transform 200ms ease-in;
+  position: relative;
+  box-shadow: 2px 2px 5px 5px #4f0c4486;
 }
 
 .item-cont:hover {
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .item-cont > img {
@@ -330,6 +338,13 @@ ul {
   height: 40px;
   width: 40px;
   margin-left: 0.3rem;
+}
+
+.league-cont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 600px) {
