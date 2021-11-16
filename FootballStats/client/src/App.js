@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import TeamsCont from "./components/teamCont/TeamsCont";
 import StandingCont from "./components/standings/StandingCont";
 import ScorersCont from "./components/scorers/ScorersCont";
+import Landing from "./components/Landing";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -46,13 +47,12 @@ const App = () => {
     <Router>
       <>
         <Navbar />
-        <div className='container-inner'>
-          <Routes>
-            <Route path='/' element={<TeamsCont />} />
-            <Route path='/standings' element={<StandingCont />} />
-            <Route path='/top-scorers' element={<ScorersCont />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path='/' element={<Landing />} />
+          <Route path='/teams' element={<TeamsCont />} />
+          <Route path='/standings' element={<StandingCont />} />
+          <Route path='/top-scorers' element={<ScorersCont />} />
+        </Routes>
       </>
     </Router>
   );
