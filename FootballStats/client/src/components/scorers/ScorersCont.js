@@ -29,12 +29,12 @@ const ScorersCont = () => {
   };
 
   return (
-    <>
+    <div className='container-inner'>
       {scorers.length === 0 ? (
         <Spinner />
       ) : (
         <>
-          <h2 className='text-center large'>Top Scorers</h2>
+          <h2 className='text-center large text-primary'>Top Scorers</h2>
           <div className='items-cont'>
             {scorers.map(({ player, statistics }) => (
               <ScorerItem
@@ -46,7 +46,7 @@ const ScorersCont = () => {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 
