@@ -4,17 +4,6 @@
   width: 20%;
 }
 
-#search-icon {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  transition: color 100ms ease-in-out;
-}
-
-#search-icon:hover {
-  color: rgba(255, 255, 255, 0.5);
-}
-
 .logo-cont {
   display: flex;
   flex-direction: row;
@@ -26,11 +15,6 @@
 
 .logo-cont:hover {
   color: rgba(255, 255, 255, 0.5);
-}
-
-#football {
-  height: 40px;
-  width: 40px;
 }
 
 .icons {
@@ -47,19 +31,9 @@
   display: none;
 }
 
-@media (max-width: 1400px) {
-  #search-icon {
-    display: none;
-  }
-
-  .search-cont {
-    width: 25%;
-  }
-}
-
 @media (max-width: 800px) {
   .navbar {
-    padding: 0;
+    padding: 1rem;
   }
 
   #logo {
@@ -75,22 +49,6 @@
   .search-cont {
     display: none;
     position: relative;
-  }
-
-  .navbar input[type="text"] {
-    width: 100%;
-    margin: 0;
-  }
-
-  #search-icon {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    background-color: #5a1297;
-    padding: 0.5rem;
-    border-radius: 0 5px 5px 0;
-    border-left: 1px solid white;
   }
 
   .navbar ul {
