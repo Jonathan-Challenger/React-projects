@@ -1,4 +1,4 @@
-import { FaSearch, FaBars } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import "./navbar.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -7,13 +7,14 @@ const Navbar = () => {
   const [isLinks, setLinks] = useState(false);
 
   return (
-    <nav className='navbar bg-primary'>
+    <nav className='navbar'>
       <Link to='/' id='logo'>
         <div className='logo-cont'>PL Stats</div>
       </Link>
       <div className='icon-cont'>
         <FaBars
           className='icons'
+          style={{ color: "#e52d8a" }}
           onClick={() => {
             setLinks(!isLinks);
           }}
