@@ -27,7 +27,6 @@ body {
   background-color: white;
   overflow-y: auto;
   overflow-x: hidden;
-  min-height: 100%;
 }
 
 a {
@@ -347,22 +346,6 @@ ul {
   justify-content: space-evenly;
 }
 
-@media (max-width: 600px) {
-  .item-cont {
-    width: 250px;
-    height: 250px;
-  }
-
-  .team-info img {
-    height: 30px;
-    width: 30px;
-  }
-
-  .item-cont .line {
-    display: none;
-  }
-}
-
 @media (max-width: 1430px) {
   .items-cont {
     grid-template-columns: 1fr;
@@ -392,6 +375,22 @@ ul {
 
   .lead {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .item-cont {
+    width: 250px;
+    height: 250px;
+  }
+
+  .team-info img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .item-cont .line {
+    display: none;
   }
 }
 
