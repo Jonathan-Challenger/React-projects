@@ -31,7 +31,7 @@ const TeamCont = () => {
         <Spinner />
       ) : (
         <>
-          <h2 className='text-center large text-primary'>Teams</h2>
+          <h2 className='text-center large text-accent'>Teams</h2>
           <div className='items-cont'>
             {teams.map(({ team }) => (
               <TeamItem team={team} key={team.id} />
