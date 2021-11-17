@@ -34,7 +34,7 @@ const ScorersCont = () => {
         <Spinner />
       ) : (
         <>
-          <h2 className='text-center large text-primary'>Top Scorers</h2>
+          <h2 className='text-center large text-accent'>Top Scorers</h2>
           <div className='items-cont'>
             {scorers.map(({ player, statistics }) => (
               <ScorerItem
