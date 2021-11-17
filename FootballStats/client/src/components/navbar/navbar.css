@@ -14,7 +14,7 @@
 }
 
 .logo-cont:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: #e52d8991;
 }
 
 .icons {
@@ -33,7 +33,7 @@
 
 @media (max-width: 800px) {
   .navbar {
-    padding: 1rem;
+    padding: 0;
   }
 
   #logo {
@@ -57,7 +57,7 @@
   }
 
   .navbar ul li {
-    background-color: #5a1297;
+    background-color: #4f0c44;
     text-align: center;
     border-bottom: 1px solid white;
     padding-bottom: 0.3rem;
