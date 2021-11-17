@@ -22,7 +22,6 @@ const StandingCont = props => {
     });
 
     const standings = res.data.response[0].league;
-    console.log(standings);
     setStandings(standings);
   };
 
@@ -34,12 +33,22 @@ const StandingCont = props => {
         <Spinner />
       ) : (
         <>
-          <h2 className='text-center large text-primary'>Standings</h2>
+          <h2 className='text-center large text-accent'>Standings</h2>
           <div className='league-cont my-2'>
-            <h3 className='text-primary lead'>{standings.name}</h3>
-            <img src={standings.logo} alt='Premier League logo' />
+            <h3 className='text-accent lead'>{standings.name}</h3>
           </div>
-          <div className='items-cont'>
+          <div id='heading' className='text-accent my-2'>
+            <p>Team</p>
+            <p>MP</p>
+            <p>W</p>
+            <p>D</p>
+            <p>L</p>
+            <p>GF</p>
+            <p>GA</p>
+            <p>GD</p>
+            <p>Pts</p>
+          </div>
+          <div className='standings-cont'>
             {teamStandings[0].map(item => (
               <StandingItem
                 key={item.team.id}
