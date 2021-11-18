@@ -37,14 +37,14 @@ const StandingCont = props => {
           <div className='league-cont my-2'>
             <h3 className='text-accent lead'>{standings.name}</h3>
           </div>
-          <div id='heading' className='text-accent my-2'>
+          <div id='heading' className='text-white my-2'>
             <p>Team</p>
-            <p>MP</p>
+            <p>P</p>
             <p>W</p>
             <p>D</p>
             <p>L</p>
-            <p>GF</p>
-            <p>GA</p>
+            <p className='remove-mobile'>GF</p>
+            <p className='remove-mobile'>GA</p>
             <p>GD</p>
             <p>Pts</p>
           </div>
