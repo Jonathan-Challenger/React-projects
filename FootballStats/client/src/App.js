@@ -4,6 +4,7 @@ import TeamsCont from "./components/teamCont/TeamsCont";
 import StandingCont from "./components/standings/StandingCont";
 import ScorersCont from "./components/scorers/ScorersCont";
 import Landing from "./components/Landing";
+import TeamDetail from "./components/teamItem/TeamDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/teams' element={<TeamsCont />} />
+          <Route path='/teams/:id' element={<TeamDetail />} />
           <Route path='/standings' element={<StandingCont />} />
           <Route path='/top-scorers' element={<ScorersCont />} />
         </Routes>
