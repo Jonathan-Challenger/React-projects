@@ -2,7 +2,7 @@ import logo from "../img/logo.png";
 
 const Landing = () => {
   return (
-    <div id='landing-cont'>
+    <div className='container-inner'>
       <h1 className='text-center heading py-5 text-white'>
         Premier League Statistics
       </h1>
