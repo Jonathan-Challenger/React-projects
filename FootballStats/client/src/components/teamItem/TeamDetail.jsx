@@ -2,6 +2,9 @@ import axios from "axios";
 import Spinner from "../spinner/Spinner";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import TeamInfo from "./TeamInfo";
+import VenueInfo from "./VenueInfo";
+import TeamStats from "./TeamStats";
 
 const TeamDetail = props => {
   const [teamInfo, setTeamInfo] = useState([]);
@@ -56,20 +59,12 @@ const TeamDetail = props => {
         <Spinner />
       ) : (
         <div className='detail-page'>
-          <div className='team-info'>
-            {/* @todo create team info component: name, logo, founded, country */}
-            <p className='text-white'>{teamInfo.team.name}</p>
-            {/* @todo create team venue info: name, city, capacity, img*/}
-            <p className='text-white'>{teamInfo.venue.name}</p>
+          <div className='basic-info'>
+            <TeamInfo teamInfo={teamInfo} />
+            <VenueInfo teamInfo={teamInfo} />
           </div>
           <div className='team-stats'>
-            {/* @todo create stats component that holds below stats */}
-            <p>Goals for against</p>
-            <p>fixtures: played won lost drawn</p>
-            <p>League: name, country, logo, flag</p>
-            <p>Clean sheet, cards, penalties</p>
-            <p>lineups</p>
-            <p>form</p>
+            <TeamStats teamStats={teamStats} />
           </div>
         </div>
       )}
