@@ -260,7 +260,7 @@ ul {
   height: 1px;
   background: white;
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* Navbar */
@@ -457,9 +457,16 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  justify-items: center;
 }
 
-.goals-for-against-info {
+.fixtures-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+
+.stats-griditem-info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -470,6 +477,37 @@ ul {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5em;
   justify-items: center;
+}
+
+.league-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.england-flag {
+  height: 100px;
+  width: 200px;
+}
+
+.biggest-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+  justify-items: center;
+}
+
+.lineup-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.clean-sheet-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 1430px) {
