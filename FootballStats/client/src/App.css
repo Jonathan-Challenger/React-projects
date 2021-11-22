@@ -153,6 +153,14 @@ ul {
   margin: 3rem 0;
 }
 
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.mx-2 {
+  margin: 0 2rem;
+}
+
 .btn {
   display: inline-block;
   background: var(--primary-color);
@@ -251,8 +259,8 @@ ul {
 .white-line {
   height: 1px;
   background: white;
-  width: 100%;
-  margin: 0.1rem 0;
+  width: 80%;
+  margin: auto;
 }
 
 /* Navbar */
@@ -443,6 +451,25 @@ ul {
   padding: 0.2rem;
   border: 1px solid white;
   border-radius: 15px;
+}
+
+.goals-for-against {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.goals-for-against-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goals-minute {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5em;
+  justify-items: center;
 }
 
 @media (max-width: 1430px) {
