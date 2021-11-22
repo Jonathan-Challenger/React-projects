@@ -1,18 +1,23 @@
 import PropTypes from "prop-types";
 import TeamGoals from "./TeamGoals";
+import TeamFix from "./TeamFix";
+import TeamLeague from "./TeamLeague";
+import TeamExtraStats from "./TeamExtraStats";
 
 const TeamStats = ({
-  teamStats: { goals, form, fixtures, cards, biggest, clean_sheet, penalty },
+  teamStats: { goals, form, fixtures, biggest, clean_sheet, lineups, league },
 }) => {
   return (
     <>
       <div className='stats-info my-1 text-white'>
         <TeamGoals goals={goals} />
-        <p className='text-white'>fixtures: played won lost drawn</p>
-        <p className='text-white'>League: name, country, logo, flag</p>
-        <p className='text-white'>
-          Clean Sheets: {clean_sheet.total}, cards, penalties
-        </p>
+        <TeamFix fixtures={fixtures} />
+        <TeamLeague league={league} />
+        <TeamExtraStats
+          biggest={biggest}
+          lineups={lineups}
+          clean_sheet={clean_sheet}
+        />
         <p className='text-white double'>{form}</p>
       </div>
     </>
