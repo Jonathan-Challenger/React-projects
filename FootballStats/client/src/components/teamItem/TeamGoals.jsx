@@ -6,19 +6,19 @@ const TeamGoals = ({ goals }) => {
       <h2 className='text-center'>Goals</h2>
       <div className='goals-for-against p-1'>
         <p>&#160;</p>
-        <div className='goals-for-against-info'>
+        <div className='stats-griditem-info'>
           <p className='mx-2'>H</p>
           <p className='mx-2'>A</p>
           <p className='mx-2'>Total</p>
         </div>
         <p>For</p>
-        <div className='goals-for-against-info'>
+        <div className='stats-griditem-info'>
           <p className='mx-2'>{goals.for.total.home}</p>
           <p className='mx-2'>{goals.for.total.away}</p>
           <p className='mx-2'>{goals.for.total.total}</p>
         </div>
         <p>Against</p>
-        <div className='goals-for-against-info'>
+        <div className='stats-griditem-info'>
           <p className='mx-2'>{goals.against.total.home}</p>
           <p className='mx-2'>{goals.against.total.away}</p>
           <p className='mx-2'>{goals.against.total.total}</p>
