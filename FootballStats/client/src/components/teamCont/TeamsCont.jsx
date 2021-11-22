@@ -21,7 +21,7 @@ const TeamCont = () => {
       },
     });
 
-    const teams = res.data.response;
+    const teams = await res.data.response;
     setTeams(teams);
   };
 

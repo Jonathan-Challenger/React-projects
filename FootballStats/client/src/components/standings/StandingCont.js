@@ -21,7 +21,7 @@ const StandingCont = props => {
       },
     });
 
-    const standings = res.data.response[0].league;
+    const standings = await res.data.response[0].league;
     setStandings(standings);
   };
 

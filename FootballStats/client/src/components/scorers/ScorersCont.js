@@ -24,7 +24,7 @@ const ScorersCont = () => {
       }
     );
 
-    const scorers = res.data.response;
+    const scorers = await res.data.response;
     setScorers(scorers);
   };
 
