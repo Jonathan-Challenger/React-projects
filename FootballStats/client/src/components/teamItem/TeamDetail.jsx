@@ -27,8 +27,7 @@ const TeamDetail = props => {
       },
     });
 
-    const teaminfo = res.data.response[0];
-    console.log(teaminfo);
+    const teaminfo = await res.data.response[0];
 
     setTeamInfo(teaminfo);
   };
@@ -48,7 +47,7 @@ const TeamDetail = props => {
       }
     );
 
-    const teamstats = res.data.response;
+    const teamstats = await res.data.response;
     console.log(teamstats);
     setTeamStats(teamstats);
   };
