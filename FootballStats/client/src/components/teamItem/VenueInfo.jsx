@@ -20,7 +20,6 @@ const VenueInfo = ({
           <img src={image} alt='Club stadium' />
         </div>
       </div>
-      <div className='white-line'></div>
     </>
   );
 };
