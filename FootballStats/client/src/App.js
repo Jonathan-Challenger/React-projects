@@ -5,45 +5,11 @@ import StandingCont from "./components/standings/StandingCont";
 import ScorersCont from "./components/scorers/ScorersCont";
 import Landing from "./components/Landing";
 import TeamDetail from "./components/teamItem/TeamDetail";
+import ScorerDetail from "./components/scorer_detail/ScorerDetail";
+import NotFound from "./components/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
-  /* const standingData = async e => {
-    e.preventDefault();
-
-    const data = await axios.get(
-      "https://v3.football.api-sports.io/standings",
-      {
-        headers: {
-          "x-apisports-key": "4b7394b710f3b701ba1b6b057b9495fd",
-        },
-        params: {
-          season: "2021",
-          league: "39",
-        },
-      }
-    );
-    console.log(data);
-  };
-
-  const scorerData = async e => {
-    e.preventDefault();
-
-    const data = await axios.get(
-      "https://v3.football.api-sports.io/players/topscorers",
-      {
-        headers: {
-          "x-apisports-key": "4b7394b710f3b701ba1b6b057b9495fd",
-        },
-        params: {
-          season: "2021",
-          league: "39",
-        },
-      }
-    );
-    console.log(data);
-  }; */
-
   return (
     <Router>
       <>
@@ -54,6 +20,8 @@ const App = () => {
           <Route path='/teams/:id' element={<TeamDetail />} />
           <Route path='/standings' element={<StandingCont />} />
           <Route path='/top-scorers' element={<ScorersCont />} />
+          <Route path='/top-scorers/:id' element={<ScorerDetail />} />
+          <Route path='/*' element={<NotFound />} />
         </Routes>
       </>
     </Router>
