@@ -5,11 +5,14 @@ const TeamForm = ({ form }) => {
     <div className='grid-item double'>
       <h2 className='text-center'>Form</h2>
       <div className='form-item'>
-        {form.split("").map((letter, index) => (
-          <p className='lead' style={handleStyle(letter)} key={index}>
-            {letter}
-          </p>
-        ))}
+        {form
+          .split("")
+          .slice(-5)
+          .map((letter, index) => (
+            <p className='lead mx-1' style={handleStyle(letter)} key={index}>
+              {letter}
+            </p>
+          ))}
       </div>
     </div>
   );
