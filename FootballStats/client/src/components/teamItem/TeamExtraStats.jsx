@@ -40,7 +40,6 @@ const TeamExtraStats = ({ biggest, lineups, clean_sheet }) => {
 
 TeamExtraStats.propTypes = {
   biggest: PropTypes.object.isRequired,
-  penalty: PropTypes.object.isRequired,
   lineups: PropTypes.array.isRequired,
 };
 
