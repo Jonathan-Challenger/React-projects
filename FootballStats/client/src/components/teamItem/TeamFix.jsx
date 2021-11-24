@@ -7,33 +7,33 @@ const TeamFix = ({ fixtures }) => {
       <div className='fixtures-info'>
         <p>&#160;</p>
         <div className='stats-griditem-info'>
-          <p className='mx-2'>H</p>
-          <p className='mx-2'>A</p>
-          <p className='mx-2'>Total</p>
+          <p>H</p>
+          <p>A</p>
+          <p>Total</p>
         </div>
         <p>Wins</p>
         <div className='stats-griditem-info'>
-          <p className='mx-2'>{fixtures.wins.home}</p>
-          <p className='mx-2'>{fixtures.wins.away}</p>
-          <p className='mx-2'>{fixtures.wins.total}</p>
+          <p>{fixtures.wins.home}</p>
+          <p>{fixtures.wins.away}</p>
+          <p>{fixtures.wins.total}</p>
         </div>
         <p>Draws</p>
         <div className='stats-griditem-info'>
-          <p className='mx-2'>{fixtures.draws.home}</p>
-          <p className='mx-2'>{fixtures.draws.away}</p>
-          <p className='mx-2'>{fixtures.draws.total}</p>
+          <p>{fixtures.draws.home}</p>
+          <p>{fixtures.draws.away}</p>
+          <p>{fixtures.draws.total}</p>
         </div>
         <p>Losses</p>
         <div className='stats-griditem-info'>
-          <p className='mx-2'>{fixtures.loses.home}</p>
-          <p className='mx-2'>{fixtures.loses.away}</p>
-          <p className='mx-2'>{fixtures.loses.total}</p>
+          <p>{fixtures.loses.home}</p>
+          <p>{fixtures.loses.away}</p>
+          <p>{fixtures.loses.total}</p>
         </div>
         <p>Played</p>
         <div className='stats-griditem-info'>
-          <p className='mx-2'>{fixtures.played.home}</p>
-          <p className='mx-2'>{fixtures.played.away}</p>
-          <p className='mx-2'>{fixtures.played.total}</p>
+          <p>{fixtures.played.home}</p>
+          <p>{fixtures.played.away}</p>
+          <p>{fixtures.played.total}</p>
         </div>
       </div>
     </div>
