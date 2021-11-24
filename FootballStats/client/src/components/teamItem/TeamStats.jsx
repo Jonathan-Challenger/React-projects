@@ -3,6 +3,7 @@ import TeamGoals from "./TeamGoals";
 import TeamFix from "./TeamFix";
 import TeamLeague from "./TeamLeague";
 import TeamExtraStats from "./TeamExtraStats";
+import TeamForm from "./TeamForm";
 
 const TeamStats = ({
   teamStats: { goals, form, fixtures, biggest, clean_sheet, lineups, league },
@@ -18,7 +19,7 @@ const TeamStats = ({
           lineups={lineups}
           clean_sheet={clean_sheet}
         />
-        <p className='text-white double'>{form}</p>
+        <TeamForm form={form} />
       </div>
     </>
   );
