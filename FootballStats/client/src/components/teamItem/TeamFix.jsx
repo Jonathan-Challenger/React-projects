@@ -4,7 +4,7 @@ const TeamFix = ({ fixtures }) => {
   return (
     <div className='grid-item text-white'>
       <h2 className='text-center'>Fixtures</h2>
-      <div className='fixtures-info p-3'>
+      <div className='fixtures-info'>
         <p>&#160;</p>
         <div className='stats-griditem-info'>
           <p className='mx-2'>H</p>
