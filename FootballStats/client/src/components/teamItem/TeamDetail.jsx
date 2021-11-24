@@ -57,15 +57,13 @@ const TeamDetail = props => {
       {teamStats.length === 0 ? (
         <Spinner />
       ) : (
-        <div className='detail-page'>
+        <>
           <div className='basic-info'>
             <TeamInfo teamInfo={teamInfo} />
             <VenueInfo teamInfo={teamInfo} />
           </div>
-          <div className='team-stats'>
-            <TeamStats teamStats={teamStats} />
-          </div>
-        </div>
+          <TeamStats teamStats={teamStats} />
+        </>
       )}
     </div>
   );
