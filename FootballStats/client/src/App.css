@@ -480,6 +480,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3em;
+  padding: 3rem;
 }
 
 .stats-griditem-info {
@@ -517,7 +518,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
 
 .clean-sheet-info {
@@ -581,6 +582,10 @@ ul {
 
   .lineup-item {
     padding: 0 0.3rem;
+  }
+
+  .fixtures-info {
+    padding: 1rem;
   }
 }
 
