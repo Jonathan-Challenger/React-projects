@@ -436,9 +436,10 @@ ul {
 }
 
 .stats-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .double {
@@ -450,7 +451,22 @@ ul {
   flex-direction: column;
   padding: 0.2rem;
   border: 1px solid white;
+  margin: 1rem 0;
   border-radius: 15px;
+  width: 80%;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: row;
+  padding: 0.2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-item p {
+  margin: 0 1rem;
 }
 
 .goals-for-against {
@@ -557,6 +573,14 @@ ul {
 
   .remove-mobile {
     display: none;
+  }
+
+  .form-item p {
+    margin: 0 0.3rem;
+  }
+
+  .lineup-item {
+    padding: 0 0.3rem;
   }
 }
 
