@@ -465,10 +465,6 @@ ul {
   justify-content: center;
 }
 
-.form-item p {
-  margin: 0 1rem;
-}
-
 .goals-for-against {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -478,7 +474,7 @@ ul {
 
 .fixtures-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 3em;
   padding: 3rem;
 }
@@ -487,6 +483,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.stats-griditem-info p {
+  margin: 0 2rem;
 }
 
 .goals-minute {
@@ -576,16 +576,16 @@ ul {
     display: none;
   }
 
-  .form-item p {
-    margin: 0 0.2rem;
-  }
-
   .lineup-item {
     padding: 0 0.3rem;
   }
 
   .fixtures-info {
     padding: 1rem;
+  }
+
+  .stats-griditem-info p {
+    margin: 0 1rem;
   }
 }
 
