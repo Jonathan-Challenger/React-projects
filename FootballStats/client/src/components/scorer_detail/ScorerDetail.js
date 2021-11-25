@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const ScorerDetail = () => {
-  const [scorerInfo, setScorerInfo] = useState([]);
-  const [scorerStats, setScorerStats] = useState([]);
+  const [scorerInfo, setScorerInfo] = useState({});
+  const [scorerStats, setScorerStats] = useState({});
 
   const { id } = useParams();
   const paramsId = Number(id);
@@ -33,12 +33,12 @@ const ScorerDetail = () => {
       player => player.player.id === paramsId
     );
     const playerInfo = await getPlayer[0].player;
+    console.log(playerInfo);
     const playerStats = await getPlayer[0].statistics[0];
+    console.log(playerStats);
     setScorerInfo(playerInfo);
     setScorerStats(playerStats);
   };
-
-  console.log(scorerStats);
 
   return (
     <div className='container-inner'>
