@@ -10,10 +10,6 @@ const ScorerDetail = () => {
   const { id } = useParams();
   const paramsId = Number(id);
 
-  useEffect(() => {
-    scorersData();
-  }, []);
-
   const scorersData = async () => {
     const res = await axios.get(
       "https://v3.football.api-sports.io/players/topscorers",
@@ -29,23 +25,29 @@ const ScorerDetail = () => {
     );
 
     const scorers = await res.data.response;
+    console.log(scorers);
     const getPlayer = await scorers.filter(
       player => player.player.id === paramsId
     );
     const playerInfo = await getPlayer[0].player;
-    console.log(playerInfo);
     const playerStats = await getPlayer[0].statistics[0];
-    console.log(playerStats);
     setScorerInfo(playerInfo);
     setScorerStats(playerStats);
   };
+
+  useEffect(() => {
+    scorersData();
+  }, [scorerInfo, scorerStats]);
 
   return (
     <div className='container-inner'>
       <p className='text-white large text-center'>Scorer {scorerInfo.name}</p>
       <p className='text-white lead text-center'>
-        Goals: {scorerStats.goals.total}
+        Goals: {/* {scorerStats.goals.total} */}
       </p>
+      <button type='button' onClick={() => console.log(scorerStats)}>
+        Info
+      </button>
     </div>
   );
 };
