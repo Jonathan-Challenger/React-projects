@@ -1,13 +1,16 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const StandingItem = ({ item }) => {
   return (
     <div className='text-white p-1 standing-item'>
-      <div id='team-info'>
-        <p style={{ marginRight: "0.2rem" }}>{item.rank} </p>
-        <img src={item.team.logo} alt='Team' />
-        <p style={{ marginLeft: "0.2rem" }}> {item.team.name}</p>
-      </div>
+      <Link className='text-white' to={`/teams/${item.team.id}`}>
+        <div id='team-info'>
+          <p style={{ marginRight: "0.2rem" }}>{item.rank} </p>
+          <img src={item.team.logo} alt='Team' />
+          <p style={{ marginLeft: "0.2rem" }}> {item.team.name}</p>
+        </div>
+      </Link>
       <p>{item.all.played}</p>
       <p>{item.all.win}</p>
       <p>{item.all.draw}</p>
