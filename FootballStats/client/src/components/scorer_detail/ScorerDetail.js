@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ScorerInfo from "./ScorerInfo";
 
 const ScorerDetail = () => {
   const [scorerInfo, setScorerInfo] = useState({});
@@ -9,6 +10,10 @@ const ScorerDetail = () => {
 
   const { id } = useParams();
   const paramsId = Number(id);
+
+  useEffect(() => {
+    scorersData();
+  }, []);
 
   const scorersData = async () => {
     const res = await axios.get(
@@ -25,7 +30,6 @@ const ScorerDetail = () => {
     );
 
     const scorers = await res.data.response;
-    console.log(scorers);
     const getPlayer = await scorers.filter(
       player => player.player.id === paramsId
     );
@@ -35,19 +39,20 @@ const ScorerDetail = () => {
     setScorerStats(playerStats);
   };
 
-  useEffect(() => {
-    scorersData();
-  }, [scorerInfo, scorerStats]);
-
   return (
     <div className='container-inner'>
-      <p className='text-white large text-center'>Scorer {scorerInfo.name}</p>
-      <p className='text-white lead text-center'>
-        Goals: {/* {scorerStats.goals.total} */}
-      </p>
-      <button type='button' onClick={() => console.log(scorerStats)}>
-        Info
-      </button>
+      {scorerStats === undefined ? (
+        <Spinner />
+      ) : (
+        <>
+          <div className='basic-info'>
+            <ScorerInfo scorerInfo={scorerInfo} />
+          </div>
+          <button type='button' onClick={() => console.log(scorerStats)}>
+            Info
+          </button>
+        </>
+      )}
     </div>
   );
 };
