@@ -48,8 +48,11 @@ const ScorerDetail = () => {
         <>
           <div className='basic-info'>
             <ScorerInfo scorerInfo={scorerInfo} />
-            <ScorerStats scorerStats={scorerStats} />
+            {/* <ScorerStats scorerStats={scorerStats} /> */}
           </div>
+          <button type='button' onClick={() => console.log(scorerStats)}>
+            Info
+          </button>
         </>
       )}
     </div>

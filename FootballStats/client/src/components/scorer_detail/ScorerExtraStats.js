@@ -1,17 +1,12 @@
 import PropTypes from "prop-types";
+import ScorerGoals from "./ScorerGoals";
 
 const ScorerExtraStats = ({ shots, passes, goals, dribbles, games }) => {
   return (
     <div className='grid-item text-white'>
       <h2 className='text-center'>Game Stats</h2>
-      <div className='p-1'>
-        <p className='lead text-center'>Goals</p>
-        <div className='scorer-stats-cont'>
-          <p>Goals scored: {goals.total}</p>
-          <p>Assists: {goals.assists}</p>
-        </div>
-      </div>
-      <div className='white-line'></div>
+      <ScorerGoals goals={goals} />
+      {/* <div className='white-line'></div>
       <div className='p-1'>
         <p className='lead text-center'>Games</p>
         <div className='scorer-stats-cont'>
@@ -49,17 +44,18 @@ const ScorerExtraStats = ({ shots, passes, goals, dribbles, games }) => {
             Rate: {((dribbles.success / dribbles.attempts) * 100).toFixed(2)}%
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
 ScorerExtraStats.propTypes = {
-  shots: PropTypes.object.isRequired,
+  /*  shots: PropTypes.object.isRequired,
   games: PropTypes.object.isRequired,
   passes: PropTypes.object.isRequired,
   goals: PropTypes.object.isRequired,
-  dribbles: PropTypes.object.isRequired,
+  dribbles: PropTypes.object.isRequired, */
+  goals: PropTypes.object,
 };
 
 export default ScorerExtraStats;

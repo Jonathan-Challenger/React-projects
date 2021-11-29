@@ -8,13 +8,13 @@ const ScorerStats = ({
 }) => {
   return (
     <div className='stats-info my-1 text-white'>
-      <ScorerExtraStats
+      {/* <ScorerExtraStats
         shots={shots}
         passes={passes}
         goals={goals}
         games={games}
         dribbles={dribbles}
-      />
+      /> */}
       <ScorerTeam team={team} />
       <ScorerLeague league={league} />
     </div>
