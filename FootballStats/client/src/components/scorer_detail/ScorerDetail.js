@@ -50,9 +50,6 @@ const ScorerDetail = () => {
             <ScorerInfo scorerInfo={scorerInfo} />
             <ScorerStats scorerStats={scorerStats} />
           </div>
-          <button type='button' onClick={() => console.log(scorerStats)}>
-            Info
-          </button>
         </>
       )}
     </div>
