@@ -9,22 +9,28 @@ import ScorerDetail from "./components/scorer_detail/ScorerDetail";
 import NotFound from "./components/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// Redux
+import { Provider } from "react-redux";
+import store from "./store";
+
 const App = () => {
   return (
-    <Router>
-      <>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Landing />} />
-          <Route path='/teams' element={<TeamsCont />} />
-          <Route path='/teams/:id' element={<TeamDetail />} />
-          <Route path='/standings' element={<StandingCont />} />
-          <Route path='/top-scorers' element={<ScorersCont />} />
-          <Route path='/top-scorers/:id' element={<ScorerDetail />} />
-          <Route path='/*' element={<NotFound />} />
-        </Routes>
-      </>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Landing />} />
+            <Route path='/teams' element={<TeamsCont />} />
+            <Route path='/teams/:id' element={<TeamDetail />} />
+            <Route path='/standings' element={<StandingCont />} />
+            <Route path='/top-scorers' element={<ScorersCont />} />
+            <Route path='/top-scorers/:id' element={<ScorerDetail />} />
+            <Route path='/*' element={<NotFound />} />
+          </Routes>
+        </>
+      </Router>
+    </Provider>
   );
 };
 
