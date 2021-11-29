@@ -3,6 +3,7 @@ import Spinner from "../spinner/Spinner";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ScorerInfo from "./ScorerInfo";
+import ScorerStats from "./ScorerStats";
 
 const ScorerDetail = () => {
   const [scorerInfo, setScorerInfo] = useState({});
@@ -47,6 +48,7 @@ const ScorerDetail = () => {
         <>
           <div className='basic-info'>
             <ScorerInfo scorerInfo={scorerInfo} />
+            <ScorerStats scorerStats={scorerStats} />
           </div>
           <button type='button' onClick={() => console.log(scorerStats)}>
             Info
