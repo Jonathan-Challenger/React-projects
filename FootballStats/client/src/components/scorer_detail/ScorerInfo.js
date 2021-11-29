@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 
 const ScorerInfo = ({
-  scorerInfo: { name, nationality, photo, weight, age, height },
+  scorerInfo: {
+    player: { name, nationality, photo, weight, age, height },
+  },
 }) => {
   return (
     <>
