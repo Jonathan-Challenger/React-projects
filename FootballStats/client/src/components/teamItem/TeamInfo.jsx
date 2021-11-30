@@ -17,7 +17,7 @@ const TeamInfo = ({ teamInfo }) => {
 };
 
 TeamInfo.propTypes = {
-  teamInfo: PropTypes.object.isRequired,
+  teamInfo: PropTypes.array.isRequired,
 };
 
 export default TeamInfo;

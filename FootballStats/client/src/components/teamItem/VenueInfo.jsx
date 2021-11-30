@@ -21,7 +21,7 @@ const VenueInfo = ({ teamInfo }) => {
 };
 
 VenueInfo.propTypes = {
-  teamInfo: PropTypes.object.isRequired,
+  teamInfo: PropTypes.array.isRequired,
 };
 
 export default VenueInfo;

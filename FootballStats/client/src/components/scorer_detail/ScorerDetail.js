@@ -13,7 +13,7 @@ const ScorerDetail = ({ getScorer, scorers: { loading, scorer } }) => {
 
   useEffect(() => {
     getScorer(paramsId);
-  }, [getScorer]);
+  }, [getScorer, paramsId]);
 
   return (
     <div className='container-inner'>

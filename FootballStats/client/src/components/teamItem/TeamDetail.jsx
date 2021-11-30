@@ -19,7 +19,7 @@ const TeamDetail = ({
   useEffect(() => {
     getTeamInfo(paramsId);
     getTeamStats(paramsId);
-  }, [getTeamInfo, getTeamStats]);
+  }, [getTeamInfo, getTeamStats, paramsId]);
 
   return (
     <div className='container-inner'>
