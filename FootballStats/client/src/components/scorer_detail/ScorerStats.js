@@ -3,20 +3,18 @@ import ScorerLeague from "./ScorerLeague";
 import ScorerTeam from "./ScorerTeam";
 import ScorerExtraStats from "./ScorerExtraStats";
 
-const ScorerStats = ({
-  scorerStats: { team, shots, passes, league, goals, games, dribbles },
-}) => {
+const ScorerStats = ({ scorerStats: { statistics } }) => {
   return (
     <div className='stats-info my-1 text-white'>
-      {/* <ScorerExtraStats
-        shots={shots}
-        passes={passes}
-        goals={goals}
-        games={games}
-        dribbles={dribbles}
-      /> */}
-      <ScorerTeam team={team} />
-      <ScorerLeague league={league} />
+      <ScorerExtraStats
+        shots={statistics[0].shots}
+        passes={statistics[0].passes}
+        goals={statistics[0].goals}
+        games={statistics[0].games}
+        dribbles={statistics[0].dribbles}
+      />
+      <ScorerTeam team={statistics[0].team} />
+      <ScorerLeague league={statistics[0].league} />
     </div>
   );
 };
