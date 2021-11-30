@@ -605,6 +605,10 @@ ul {
     font-size: 4rem;
   }
 
+  .scorer-stats-cont {
+    flex-direction: column;
+  }
+
   /* Text Styles */
   .x-large {
     font-size: 2rem;
