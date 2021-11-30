@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
-import TeamsCont from "./components/teamCont/TeamsCont";
+import TeamCont from "./components/teamCont/TeamCont";
 import StandingCont from "./components/standings/StandingCont";
 import ScorersCont from "./components/scorers/ScorersCont";
 import Landing from "./components/Landing";
@@ -21,7 +21,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path='/' element={<Landing />} />
-            <Route path='/teams' element={<TeamsCont />} />
+            <Route path='/teams' element={<TeamCont />} />
             <Route path='/teams/:id' element={<TeamDetail />} />
             <Route path='/standings' element={<StandingCont />} />
             <Route path='/top-scorers' element={<ScorersCont />} />
