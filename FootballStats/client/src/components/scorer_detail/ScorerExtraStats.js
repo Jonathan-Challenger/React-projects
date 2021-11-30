@@ -60,7 +60,6 @@ ScorerExtraStats.propTypes = {
   passes: PropTypes.object.isRequired,
   goals: PropTypes.object.isRequired,
   dribbles: PropTypes.object.isRequired,
-  goals: PropTypes.object,
 };
 
 export default ScorerExtraStats;

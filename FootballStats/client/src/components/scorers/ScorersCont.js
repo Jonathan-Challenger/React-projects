@@ -34,6 +34,7 @@ const ScorersCont = ({ getScorers, scorers: { topScorers, loading } }) => {
 
 ScorersCont.propTypes = {
   getScorers: PropTypes.func.isRequired,
+  scorers: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
