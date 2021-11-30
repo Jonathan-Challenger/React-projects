@@ -23,7 +23,7 @@ const ScorerDetail = ({ getScorer, scorers: { loading, scorer } }) => {
         <>
           <div className='basic-info'>
             <ScorerInfo scorerInfo={scorer} />
-            {/* <ScorerStats scorerStats={scorerStats} /> */}
+            <ScorerStats scorerStats={scorer} />
           </div>
         </>
       )}
