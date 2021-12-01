@@ -21,7 +21,6 @@ const TeamCont = ({ getTeams, teams: { teams, loading } }) => {
             {teams.map(({ team }) => (
               <TeamItem team={team} key={team.id} />
             ))}
-            test
           </div>{" "}
         </>
       )}
