@@ -1,0 +1,26 @@
+footer {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4f0c44;
+  opacity: 0.8;
+}
+
+.socials {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.socials a {
+  color: #e52d8a;
+  transition: all 200ms ease-in;
+}
+
+.socials a:hover {
+  color: #e52d8991;
+}
