@@ -7,6 +7,7 @@ import Landing from "./components/Landing";
 import TeamDetail from "./components/teamItem/TeamDetail";
 import ScorerDetail from "./components/scorer_detail/ScorerDetail";
 import NotFound from "./components/NotFound";
+import Footer from "./components/footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Redux
@@ -28,6 +29,7 @@ const App = () => {
             <Route path='/top-scorers/:id' element={<ScorerDetail />} />
             <Route path='/*' element={<NotFound />} />
           </Routes>
+          <Footer />
         </>
       </Router>
     </Provider>
