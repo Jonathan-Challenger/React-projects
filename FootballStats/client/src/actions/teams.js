@@ -1,11 +1,12 @@
 import { GET_TEAMS, GET_TEAM_INFO, GET_TEAM_STATS } from "./types";
 import axios from "axios";
+import { key } from "../config/keys";
 
 export const getTeams = () => async dispatch => {
   try {
     const res = await axios.get("https://v3.football.api-sports.io/teams", {
       headers: {
-        "x-apisports-key": "4b7394b710f3b701ba1b6b057b9495fd",
+        "x-apisports-key": key,
       },
       params: {
         season: "2021",
@@ -29,7 +30,7 @@ export const getTeamStats = id => async dispatch => {
       "https://v3.football.api-sports.io/teams/statistics",
       {
         headers: {
-          "x-apisports-key": "4b7394b710f3b701ba1b6b057b9495fd",
+          "x-apisports-key": key,
         },
         params: {
           team: id,
@@ -54,7 +55,7 @@ export const getTeamInfo = id => async dispatch => {
   try {
     const res = await axios.get("https://v3.football.api-sports.io/teams", {
       headers: {
-        "x-apisports-key": "4b7394b710f3b701ba1b6b057b9495fd",
+        "x-apisports-key": key,
       },
       params: {
         id: id,
